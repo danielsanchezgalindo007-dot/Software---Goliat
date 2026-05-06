@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de sesión - Goliat</title>
+  <link rel="stylesheet" href="css/style-sesion.css">
+</head>
+<body>
+<script src="js/sesion.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <div class="tarjeta-sesion">
+
+    <div class="contenedor-logo">
+      <img src="img/logo-goliat.png" alt="logo-goliat">
+    </div>
+
+    <h1 class="titulo-sesion">Bienvenido de nuevo a Goliat</h1>
+    <p class="descripcion-sesion">Ingresa tus credenciales para continuar</p>
+
+
+    <!-- CAMPO: id-usuario -->
+    <div class="grupo-campo">
+      <label class="etiqueta-campo" for="campo-usuario">Identificación</label>
+      <input
+        class="entrada-campo"
+        type="text"
+        id="campo-usuario"
+        name="usuario"
+        placeholder="Identificación"
+        autocomplete="username"
+      >
+      <p class="ayuda-campo">Ingresa tu número de identificación</p>
+    </div>
+
+
+    <!-- CAMPO: CONTRASEÑA -->
+    <div class="grupo-campo">
+      <label class="etiqueta-campo" for="campo-contrasena">Contraseña</label>
+      <input
+        class="entrada-campo"
+        type="password"
+        id="campo-contrasena"
+        name="contrasena"
+        placeholder="••••••••"
+        autocomplete="current-password">
+      <p class="ayuda-campo">Mínimo 8 caracteres</p>
+    </div>
+
+    <!-- ENLACE: OLVIDÉ MI CONTRASEÑA -->
+    <div class="grupo-olvidar">
+        <a class="enlace-olvidar" href="#">¿Olvidaste tu contraseña?</a>
+    </div>
+
+    <div class="contenedor-captcha">
+        <div class="g-recaptcha" data-sitekey="6LdA49UsAAAAAGwflmaDHC9AY4kgARqO3An7mSyL"></div>
+    </div>
+
+
+    <button class="boton-ingresar" onclick="manejarLogin()">
+      Iniciar sesión
+    </button>
+
+
+    <hr class="linea-separadora">
+
+
+    <p class="pie-formulario">
+      ¿No tienes cuenta? <a href="#">Regístrate</a>
+    </p>
+
+  </div>
+  
+
+
+  <!-- NOTIFICACION — mensaje temporal (mensaje controlado por el js) -->
+  <div class="notificacion" id="notificacion" role="status" aria-live="polite"></div>
+
+
+</body>
+</html>
